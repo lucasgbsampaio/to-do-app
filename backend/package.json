@@ -1,10 +1,17 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon --experimental-modules src/server.js"
+  },
   "dependencies": {
     "express": "^4.17.1",
     "mongoose": "^5.10.13"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
   }
 }
