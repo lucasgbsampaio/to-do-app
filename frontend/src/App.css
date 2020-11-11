@@ -1,0 +1,15 @@
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #262626;
+}
+
+body,
+input,
+button,
+textarea,
+a {
+  color: #f4f4f4;
+}
