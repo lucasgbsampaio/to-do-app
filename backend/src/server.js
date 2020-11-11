@@ -1,6 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import bodyParser from 'body-parser';
 
 import routes from './routes.js';
 
@@ -8,7 +9,8 @@ dotenv.config();
 
 const app = express();
 
-app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(routes);
 
 const { DB_USER, DB_PASSWORD, DB_NAME } = process.env;

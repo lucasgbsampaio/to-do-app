@@ -1,7 +1,7 @@
-import { Schema, model } from 'mongoose';
+import mongoose from 'mongoose';
 import bcrypt from 'bcrypt';
 
-const UserSchema = new Schema({
+const UserSchema = new mongoose.Schema({
   username: {
     type: String,
     required: true,
@@ -12,13 +12,6 @@ const UserSchema = new Schema({
     required: true,
     select: false,
   },
-
-  todos: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: 'ToDoModel',
-    },
-  ],
 });
 
 UserSchema.pre('save', async function (next) {
@@ -28,10 +21,10 @@ UserSchema.pre('save', async function (next) {
   next();
 });
 
-const ToDoSchema = new Schema(
+const ToDoSchema = new mongoose.Schema(
   {
     userId: {
-      type: Schema.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       ref: 'UserModel',
       required: true,
     },
@@ -49,13 +42,12 @@ const ToDoSchema = new Schema(
     status: {
       type: Boolean,
       required: true,
+      default: true,
     },
   },
 
   { timestamps: true }
 );
 
-const UserModel = model('UserModel', UserSchema);
-const ToDoModel = model('ToDoModel', ToDoSchema);
-
-export default { UserModel, ToDoModel };
+export const UserModel = mongoose.model('UserModel', UserSchema);
+export const ToDoModel = mongoose.model('ToDoModel', ToDoSchema);
