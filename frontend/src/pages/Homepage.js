@@ -10,17 +10,24 @@ export default function Homepage() {
   return (
     <div className={style.container}>
       <div className={style.wrapper}>
-        <img className={style.icon} src={clipboard} alt="to-do-icon" />
+        <div className={style.content}>
+          <img className={style.icon} src={clipboard} alt="to-do-icon" />
+          <span>To-do List</span>
 
-        <main>
-          <h1>Testando aqui</h1>
-          <p>Testando aqui também</p>
-        </main>
+          <main>
+            <h1>Organize tudo com o To-do List</h1>
 
-        <NavLink to="/login">Entrar</NavLink>
-        <NavLink to="/register">Registrar</NavLink>
+            <p>
+              Recupere a clareza e a tranquilidade, tirando todas essas tarefas
+              da sua cabeça e colocando na sua lista de tarefas.
+            </p>
 
-        <img className={style.bg} src={illustation} alt="" />
+            <NavLink to="/login">Entrar</NavLink>
+            <NavLink to="/register">Registrar</NavLink>
+          </main>
+        </div>
+
+        <img className={style.bg} src={illustation} alt="illustration" />
       </div>
     </div>
   );
