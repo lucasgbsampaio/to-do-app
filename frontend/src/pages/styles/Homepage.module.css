@@ -5,35 +5,90 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #fdc830; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f37335,
+    #fdc830
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f37335,
+    #fdc830
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .wrapper {
-  width: 100%;
-  max-width: 1100px;
+  position: relative;
+  width: 90%;
+  max-width: 1300px;
   height: 100%;
-  max-height: 680px;
+  max-height: 720px;
 
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
   justify-content: space-between;
-}
 
-span {
-  font-size: 56px;
-  font-weight: 900;
-}
-
-main h1 {
-  font-size: 64px;
-  font-weight: 900;
-}
-
-main p {
-  font-size: 32px;
-  font-weight: 500;
+  background: url('../../assets/landing.svg') no-repeat right bottom / 750px
+    600px;
 }
 
 .icon {
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
+}
+
+.name {
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 32px;
+}
+
+main {
+  margin-bottom: 46px;
+}
+
+main a {
+  background-image: linear-gradient(
+    to right,
+    #4776e6 0%,
+    #8e54e9 51%,
+    #4776e6 100%
+  );
+}
+
+main a {
+  max-width: 180px;
+  padding: 15px 55px;
+  text-align: center;
+  font-size: 20px;
+  transition: 0.5s;
+  background-size: 200% auto;
+  border-radius: 10px;
+  display: inline;
+}
+
+main a + a {
+  margin-left: 10px;
+  padding: 15px 45px;
+}
+
+main a:hover {
+  background-position: right center;
+  text-decoration: none;
+}
+
+main h1 {
+  max-width: 360px;
+  font-size: 64px;
+  line-height: 66px;
+  font-weight: 800;
+}
+
+main p {
+  max-width: 360px;
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 500;
 }
