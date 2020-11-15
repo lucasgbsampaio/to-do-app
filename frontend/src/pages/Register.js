@@ -1,5 +1,7 @@
 import React from 'react';
 
+import style from './styles/Register.module.css';
+
 export default function Register() {
-  return <div>Register</div>;
+  return <div className={style.container}>Register</div>;
 }
