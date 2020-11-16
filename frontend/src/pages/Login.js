@@ -1,7 +1,13 @@
 import React from 'react';
 
+import Form from '../components/Form';
+
 import style from './styles/Login.module.css';
 
 export default function Login() {
-  return <div className={style.container}>Login</div>;
+  return (
+    <div className={style.container}>
+      <Form type="Entrar" />
+    </div>
+  );
 }
