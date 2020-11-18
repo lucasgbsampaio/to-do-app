@@ -55,7 +55,7 @@ export function TODO_POST(data) {
 
 export function TODO_PUT(data, id) {
   return {
-    url: API_URL + '/update-todo/' + id,
+    url: `${API_URL}/update-todo/${id}`,
     options: {
       method: 'PUT',
       headers: {
@@ -69,7 +69,7 @@ export function TODO_PUT(data, id) {
 
 export function TODO_DELETE(id) {
   return {
-    url: API_URL + '/delete-todo/' + id,
+    url: `${API_URL}/delete-todo/${id}`,
     options: {
       method: 'DELETE',
       headers: {

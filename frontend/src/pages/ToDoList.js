@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ToDoItem from '../components/ToDoItem';
-import { TODOS_GET, TODO_POST } from '../services/api';
+import { TODOS_GET, TODO_POST, TODO_PUT } from '../services/api';
 
 import style from './styles/ToDoList.module.css';
 
@@ -16,17 +16,23 @@ export default function ToDoList() {
     const res = await fetch(url, options);
     const json = await res.json();
 
-    setToDos([...toDos, ...json]);
+    setToDos([...toDos, json[0].toDo]);
+  }
+
+  async function getToDos() {
+    const { url, options } = TODOS_GET();
+    const res = await fetch(url, options);
+    const json = await res.json();
+    setToDos(json.toDos);
+  }
+
+  async function handleUpdate(status, id) {
+    const { url, options } = TODO_PUT(status, id);
+    await fetch(url, options);
+    getToDos();
   }
 
   React.useEffect(() => {
-    async function getToDos() {
-      const { url, options } = TODOS_GET();
-      const res = await fetch(url, options);
-      const json = await res.json();
-
-      setToDos(json);
-    }
     getToDos();
   }, []);
 
@@ -35,7 +41,7 @@ export default function ToDoList() {
       <div className={style.wrapper}>
         <h1>To-Do List</h1>
 
-        <form onSubmit={handleSubmit} autocomplete="off">
+        <form onSubmit={handleSubmit} autoComplete="off">
           <label htmlFor="description">Tarefa:</label>
           <input
             type="text"
@@ -52,7 +58,13 @@ export default function ToDoList() {
         <div className={style.mainContent}>
           {toDos &&
             toDos.map((todo) => {
-              return <ToDoItem key={todo._id} data={todo} />;
+              return (
+                <ToDoItem
+                  key={todo._id}
+                  data={todo}
+                  handleUpdate={handleUpdate}
+                />
+              );
             })}
         </div>
       </div>

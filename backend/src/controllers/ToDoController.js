@@ -5,7 +5,7 @@ export default {
     try {
       const toDos = await ToDoModel.find({ userId: req.userId });
 
-      return res.status(200).send(toDos);
+      return res.status(200).send({ toDos });
     } catch (error) {
       res.status(400).send({ error: 'Error showing ToDos' });
     }
@@ -13,6 +13,7 @@ export default {
 
   async addTodo(req, res) {
     const { description, status } = req.body;
+
     try {
       const toDo = await ToDoModel.create({
         description,
@@ -20,7 +21,7 @@ export default {
         userId: req.userId,
       });
 
-      return res.status(200).send([toDo]);
+      return res.status(200).send([{ toDo }]);
     } catch (error) {
       res.status(400).send({ error: 'Error creating new ToDo' });
     }
@@ -30,11 +31,13 @@ export default {
     const { id } = req.params;
 
     try {
-      const toDo = await ToDoModel.findOneAndUpdate(id, req.body, {
+      await ToDoModel.findOneAndUpdate(id, req.body, {
         new: true,
       });
 
-      return res.status(200).send({ toDo });
+      const toDos = await ToDoModel.find({ userId: req.userId });
+
+      return res.status(200).send({ toDos });
     } catch (error) {
       res.status(400).send({ error: 'Error updating new ToDo' });
     }

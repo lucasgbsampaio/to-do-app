@@ -21,3 +21,32 @@
   padding: 10px 25px;
   font-size: 18px;
 }
+
+.content img {
+  height: 18px;
+  width: 22px;
+  cursor: pointer;
+}
+
+.checkbox {
+  width: 20px;
+  height: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s ease-in-out;
+  border: 1px solid #fff;
+}
+
+.checkbox:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.checkbox-checked {
+  color: #000;
+  background: #fff;
+}
