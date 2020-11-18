@@ -30,7 +30,7 @@ export default function Form({ type }) {
         const { token } = await res.json();
         window.localStorage.setItem('token', token);
 
-        navigate('/todos');
+        navigate('/to-do');
       }
     } catch (error) {
       setError(error.message);
@@ -50,13 +50,20 @@ export default function Form({ type }) {
       const { token } = await res.json();
       window.localStorage.setItem('token', token);
 
-      navigate('/todos');
+      navigate('/to-do');
     } catch (error) {
       setError(error.message);
     } finally {
       setLoading(false);
     }
   }
+
+  React.useEffect(() => {
+    return () => {
+      setLoading(false);
+      setError(null);
+    };
+  }, []);
 
   return (
     <div

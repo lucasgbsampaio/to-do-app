@@ -25,3 +25,56 @@ export function USER_LOGIN(body) {
     },
   };
 }
+
+export function TODOS_GET() {
+  return {
+    url: API_URL + '/todos',
+    options: {
+      method: 'GET',
+      headers: {
+        Authorization: 'Bearer ' + window.localStorage.getItem('token'),
+      },
+      cache: 'no-store',
+    },
+  };
+}
+
+export function TODO_POST(data) {
+  return {
+    url: API_URL + '/add-todo',
+    options: {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer ' + window.localStorage.getItem('token'),
+      },
+      body: JSON.stringify(data),
+    },
+  };
+}
+
+export function TODO_PUT(data, id) {
+  return {
+    url: API_URL + '/update-todo/' + id,
+    options: {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer ' + window.localStorage.getItem('token'),
+      },
+      body: JSON.stringify(data),
+    },
+  };
+}
+
+export function TODO_DELETE(id) {
+  return {
+    url: API_URL + '/delete-todo/' + id,
+    options: {
+      method: 'DELETE',
+      headers: {
+        Authorization: 'Bearer ' + window.localStorage.getItem('token'),
+      },
+    },
+  };
+}

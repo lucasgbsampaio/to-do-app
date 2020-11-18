@@ -21,7 +21,7 @@ export default {
         userId: req.userId,
       });
 
-      return res.status(200).send({ toDo });
+      return res.status(200).send([toDo]);
     } catch (error) {
       res.status(400).send({ error: 'Error creating new ToDo' });
     }

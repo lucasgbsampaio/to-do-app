@@ -1,0 +1,9 @@
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222222;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 0px 15px;
+}
