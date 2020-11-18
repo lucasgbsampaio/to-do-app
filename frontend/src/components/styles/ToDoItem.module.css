@@ -7,3 +7,17 @@
   border-radius: 5px;
   padding: 0px 15px;
 }
+
+.content input {
+  background-color: #222222;
+  border: none;
+}
+
+.description {
+  overflow-wrap: break-word;
+  width: 100%;
+  min-width: 100px;
+  max-width: 655px;
+  padding: 10px 25px;
+  font-size: 18px;
+}

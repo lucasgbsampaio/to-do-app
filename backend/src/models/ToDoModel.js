@@ -29,11 +29,6 @@ const ToDoSchema = new mongoose.Schema(
       required: true,
     },
 
-    name: {
-      type: String,
-      required: true,
-    },
-
     description: {
       type: String,
       required: true,

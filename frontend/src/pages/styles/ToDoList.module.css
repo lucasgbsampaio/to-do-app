@@ -40,9 +40,9 @@
   border-bottom: 1px solid #999;
   background-color: #222222;
   font-size: 16px;
-  text-align: center;
-  max-width: 220px;
   width: 100%;
+  padding: 0px 5px;
+  margin: 0px 10px;
 }
 
 .wrapper form input:focus,

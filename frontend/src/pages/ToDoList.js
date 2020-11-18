@@ -6,14 +6,13 @@ import { TODOS_GET, TODO_POST } from '../services/api';
 import style from './styles/ToDoList.module.css';
 
 export default function ToDoList() {
-  const [name, setName] = React.useState('');
   const [description, setDescription] = React.useState('');
   const [toDos, setToDos] = React.useState([]);
 
   async function handleSubmit(event) {
     event.preventDefault();
 
-    const { url, options } = TODO_POST({ name, description });
+    const { url, options } = TODO_POST({ description });
     const res = await fetch(url, options);
     const json = await res.json();
 
@@ -36,23 +35,13 @@ export default function ToDoList() {
       <div className={style.wrapper}>
         <h1>To-Do List</h1>
 
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="name">Título:</label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Adicione um título..."
-            value={name}
-            onChange={({ target }) => setName(target.value)}
-          />
-
-          <label htmlFor="description">Descrição:</label>
+        <form onSubmit={handleSubmit} autocomplete="off">
+          <label htmlFor="description">Tarefa:</label>
           <input
             type="text"
             name="description"
             id="description"
-            placeholder="Adicione uma descrição..."
+            placeholder="Adicione uma tarefa..."
             value={description}
             onChange={({ target }) => setDescription(target.value)}
           />

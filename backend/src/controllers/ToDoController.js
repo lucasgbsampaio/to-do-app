@@ -12,10 +12,9 @@ export default {
   },
 
   async addTodo(req, res) {
-    const { name, description, status } = req.body;
+    const { description, status } = req.body;
     try {
       const toDo = await ToDoModel.create({
-        name,
         description,
         status,
         userId: req.userId,
