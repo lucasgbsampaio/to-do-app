@@ -14,7 +14,7 @@ export default function ToDoItem({ data, handleUpdate }) {
   }
 
   return (
-    <div className={style.content}>
+    <div className={`${style.content} ${data.status && `${style.completed}`}`}>
       <div
         onClick={() => {
           handleUpdate({ status: !data.status }, data._id);

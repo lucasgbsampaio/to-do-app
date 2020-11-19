@@ -9,6 +9,10 @@ export default function ToDoList() {
   const [description, setDescription] = React.useState('');
   const [toDos, setToDos] = React.useState([]);
 
+  React.useEffect(() => {
+    getToDos();
+  }, []);
+
   async function handleSubmit(event) {
     event.preventDefault();
 
@@ -31,10 +35,6 @@ export default function ToDoList() {
     await fetch(url, options);
     getToDos();
   }
-
-  React.useEffect(() => {
-    getToDos();
-  }, []);
 
   return (
     <div className={style.container}>

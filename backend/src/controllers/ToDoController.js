@@ -31,7 +31,7 @@ export default {
     const { id } = req.params;
 
     try {
-      await ToDoModel.findOneAndUpdate(id, req.body, {
+      await ToDoModel.findByIdAndUpdate(id, req.body, {
         new: true,
       });
 
@@ -47,7 +47,7 @@ export default {
     const { id } = req.params;
 
     try {
-      await ToDoModel.findOneAndDelete(id);
+      await ToDoModel.findByIdAndDelete(id);
 
       return res.status(200).send();
     } catch (error) {
