@@ -24,33 +24,26 @@ export default function Form({ type }) {
 
         const { url, options } = USER_CREATE({ username, password });
         const res = await fetch(url, options);
+        const json = await res.json();
+        if (!res.ok) throw new Error(json.error);
 
-        if (!res.ok) throw new Error(`Error: ${res.statusText}`);
+        window.localStorage.setItem('token', json.token);
 
-        const { token } = await res.json();
-        window.localStorage.setItem('token', token);
+        navigate('/to-do');
+      } else {
+        setError(null);
+        setLoading(true);
+
+        const { url, options } = USER_LOGIN({ username, password });
+        const res = await fetch(url, options);
+        const json = await res.json();
+
+        if (!res.ok) throw new Error(json.error);
+
+        window.localStorage.setItem('token', json.token);
 
         navigate('/to-do');
       }
-    } catch (error) {
-      setError(error.message);
-    } finally {
-      setLoading(false);
-    }
-
-    try {
-      setError(null);
-      setLoading(true);
-
-      const { url, options } = USER_LOGIN({ username, password });
-      const res = await fetch(url, options);
-
-      if (!res.ok) throw new Error(`Error: ${res.statusText}`);
-
-      const { token } = await res.json();
-      window.localStorage.setItem('token', token);
-
-      navigate('/to-do');
     } catch (error) {
       setError(error.message);
     } finally {
@@ -124,7 +117,7 @@ export default function Form({ type }) {
           )}
           {error && (
             <span style={{ marginLeft: '15px', fontSize: '14px' }}>
-              Dados incorretos
+              {error}
             </span>
           )}
         </div>

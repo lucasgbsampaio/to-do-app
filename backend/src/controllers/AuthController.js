@@ -20,15 +20,13 @@ export default {
       const result = await UserModel.findOne({ username });
 
       if (result) {
-        res.status(400).send({ error: 'User already exists.' });
+        res.status(400).send({ error: 'Usuário já existe' });
       }
 
       const user = await UserModel.create({ username, password });
 
       if (!user) {
-        res
-          .status(400)
-          .send({ error: 'An error has occurred, please, try again.' });
+        res.status(400).send({ error: 'Campos vazios' });
       }
 
       user.password = undefined;
@@ -38,9 +36,7 @@ export default {
         token: generateToken({ id: user.id }),
       });
     } catch (error) {
-      res
-        .status(400)
-        .send({ error: 'An error has occurred, please, try again.' });
+      res.status(400).send({ error: 'Campos vazios' });
     }
   },
 
@@ -51,15 +47,13 @@ export default {
       const user = await UserModel.findOne({ username }).select('+password');
 
       if (!user) {
-        res.status(400).send({ error: 'User not found.' });
+        res.status(400).send({ error: 'Dados inválidos' });
       }
 
       const userMatch = await bcrypt.compare(password, user.password);
 
       if (!userMatch) {
-        res
-          .status(400)
-          .send({ error: 'Wrong user and/or password, try again.' });
+        res.status(400).send({ error: 'Dados inválidos' });
       }
 
       user.password = undefined;
@@ -69,9 +63,7 @@ export default {
         token: generateToken({ id: user.id }),
       });
     } catch (error) {
-      res
-        .status(400)
-        .send({ error: 'An error has occurred, please, try again.' });
+      res.status(400).send({ error: 'Erro ao entrar' });
     }
   },
 };

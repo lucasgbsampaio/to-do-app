@@ -16,11 +16,13 @@ export default function ToDoList() {
   async function handleSubmit(event) {
     event.preventDefault();
 
-    const { url, options } = TODO_POST({ description });
-    const res = await fetch(url, options);
-    const json = await res.json();
+    if (description) {
+      const { url, options } = TODO_POST({ description });
+      const res = await fetch(url, options);
+      const json = await res.json();
 
-    setToDos([...toDos, json[0].toDo]);
+      setToDos([...toDos, json[0].toDo]);
+    }
   }
 
   async function getToDos() {
