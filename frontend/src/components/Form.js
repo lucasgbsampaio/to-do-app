@@ -72,7 +72,7 @@ export default function Form({ type }) {
           ? {
               backgroundImage: `url(${Background})`,
               backgroundRepeat: 'no-repeat',
-              backgroundColor: '#f4f4f4',
+              backgroundColor: '#fff',
               backgroundPosition: '85% center',
             }
           : null
@@ -80,7 +80,7 @@ export default function Form({ type }) {
       className={style.wrapper}
     >
       <h1>{type}</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} autoComplete="off">
         <div>
           <label className={style.label} htmlFor="username">
             Usuário:
