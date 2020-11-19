@@ -23,6 +23,12 @@
     600px;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .icon {
   width: 55px;
   height: 55px;
