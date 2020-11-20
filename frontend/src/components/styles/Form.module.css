@@ -9,6 +9,7 @@
   align-items: flex-start;
   flex-direction: column;
   justify-content: space-between;
+  margin: 0px 20px;
 
   background: url('../../assets//signin-image.jpg') no-repeat 90% center;
   background-color: #fff;
@@ -83,3 +84,36 @@
   background-position: right center;
   text-decoration: none;
 }
+
+@media (max-width: 770px) {
+  .wrapper {
+    background: none !important;
+    background-color: #fff !important;
+  }
+  .wrapper form {
+    width: 100%;
+  }
+  .wrapper input[type='submit'] {
+    width: 100%;
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 420px) {
+  .wrapper h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 354px) {
+  form a {
+    display: flex;
+  }
+}
+
+@media (max-height: 520px) {
+  .wrapper {
+    margin-bottom: 15px;
+    margin-top: 50px;
+  }
+} ;

@@ -55,3 +55,10 @@
   text-decoration: line-through;
   color: #777;
 }
+
+@media (max-width: 440px) {
+  .description {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
