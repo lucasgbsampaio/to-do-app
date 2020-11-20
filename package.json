@@ -5,7 +5,8 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "start": "nodemon --experimental-modules src/server.js"
+    "start": "nodemon --experimental-modules src/server.js",
+    "heroku-postbuild": "cd frontend && yarn && yarn run build"
   },
   "dependencies": {
     "bcrypt": "^5.0.0",
