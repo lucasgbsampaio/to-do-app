@@ -1,4 +1,4 @@
-.testando {
+.wrapper {
   background-color: #fff;
   position: relative;
   width: 90%;
@@ -11,40 +11,41 @@
   flex-direction: column;
   justify-content: space-between;
   margin: 0px 20px;
+  background: url('../../assets//signin-image.jpg') no-repeat 90% center;
 
   color: black;
   border-radius: 7px;
 }
 
-.testando h1 {
+.wrapper h1 {
   font-size: 56px;
   font-weight: 900;
 }
 
-.testando div {
+.wrapper div {
   font-size: 18px;
   padding: 10px 0px;
   line-height: 30px;
   font-weight: 600;
 }
 
-.testando h1,
-.testando div,
-.testando a {
+.wrapper h1,
+.wrapper div,
+.wrapper a {
   margin: 15px;
 }
 
-.testando input,
-.testando button,
-.testando a {
+.wrapper input,
+.wrapper button,
+.wrapper a {
   color: black;
 }
 
-.testando a {
+.wrapper a {
   text-decoration: underline;
 }
 
-.testando input {
+.wrapper input {
   width: 90%;
   border: none;
   border-bottom: 1px solid #999;
@@ -53,12 +54,12 @@
   background-color: #fff;
 }
 
-.testando input:focus,
-.testando input:active {
+.wrapper input:focus,
+.wrapper input:active {
   outline: none;
 }
 
-.testando input[type='submit'] {
+.wrapper input[type='submit'] {
   background-image: linear-gradient(
     to right,
     #4776e6 0%,
@@ -67,7 +68,7 @@
   );
 }
 
-.testando input[type='submit'] {
+.wrapper input[type='submit'] {
   width: 50%;
   padding: 10px 25px;
   text-align: center;
@@ -79,23 +80,23 @@
   cursor: pointer;
 }
 
-.testando input[type='submit']:hover {
+.wrapper input[type='submit']:hover {
   background-position: right center;
   text-decoration: none;
 }
 
 @media (max-width: 770px) {
-  .testando form {
+  .wrapper form {
     width: 100%;
   }
-  .testando input[type='submit'] {
+  .wrapper input[type='submit'] {
     width: 100%;
     max-width: 150px;
   }
 }
 
 @media (max-width: 420px) {
-  .testando h1 {
+  .wrapper h1 {
     font-size: 36px;
   }
 }

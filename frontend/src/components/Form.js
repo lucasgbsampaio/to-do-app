@@ -70,7 +70,7 @@ export default function Form({ type }) {
             }
           : null
       }
-      className={style.testando}
+      className={style.wrapper}
     >
       <h1>{type}</h1>
       <form onSubmit={handleSubmit} autoComplete="off">
