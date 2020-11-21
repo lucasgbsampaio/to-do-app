@@ -5,7 +5,7 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import path from 'path';
 
-import routes from './src/routes.js';
+import routes from './routes.js';
 
 dotenv.config();
 
@@ -15,9 +15,12 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-console.log(__dirname);
-app.use(express.static(path.join(__dirname, '/frontend/build')));
+if (process.env.NODE_ENV === 'production')
+  app.use(express.static(path.join(__dirname, '/frontend/build')));
 app.use('/api', routes);
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
+});
 
 const { DB_USER, DB_PASSWORD, DB_NAME } = process.env;
 
