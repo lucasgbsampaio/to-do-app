@@ -1,4 +1,4 @@
-.wrapper {
+.testando {
   background-color: #fff;
   position: relative;
   width: 90%;
@@ -16,35 +16,35 @@
   border-radius: 7px;
 }
 
-.wrapper h1 {
+.testando h1 {
   font-size: 56px;
   font-weight: 900;
 }
 
-.wrapper div {
+.testando div {
   font-size: 18px;
   padding: 10px 0px;
   line-height: 30px;
   font-weight: 600;
 }
 
-.wrapper h1,
-.wrapper div,
-.wrapper a {
+.testando h1,
+.testando div,
+.testando a {
   margin: 15px;
 }
 
-.wrapper input,
-.wrapper button,
-.wrapper a {
+.testando input,
+.testando button,
+.testando a {
   color: black;
 }
 
-.wrapper a {
+.testando a {
   text-decoration: underline;
 }
 
-.wrapper input {
+.testando input {
   width: 90%;
   border: none;
   border-bottom: 1px solid #999;
@@ -53,12 +53,12 @@
   background-color: #fff;
 }
 
-.wrapper input:focus,
-.wrapper input:active {
+.testando input:focus,
+.testando input:active {
   outline: none;
 }
 
-.wrapper input[type='submit'] {
+.testando input[type='submit'] {
   background-image: linear-gradient(
     to right,
     #4776e6 0%,
@@ -67,7 +67,7 @@
   );
 }
 
-.wrapper input[type='submit'] {
+.testando input[type='submit'] {
   width: 50%;
   padding: 10px 25px;
   text-align: center;
@@ -79,23 +79,23 @@
   cursor: pointer;
 }
 
-.wrapper input[type='submit']:hover {
+.testando input[type='submit']:hover {
   background-position: right center;
   text-decoration: none;
 }
 
 @media (max-width: 770px) {
-  .wrapper form {
+  .testando form {
     width: 100%;
   }
-  .wrapper input[type='submit'] {
+  .testando input[type='submit'] {
     width: 100%;
     max-width: 150px;
   }
 }
 
 @media (max-width: 420px) {
-  .wrapper h1 {
+  .testando h1 {
     font-size: 36px;
   }
 }
