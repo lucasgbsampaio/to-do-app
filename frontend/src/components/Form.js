@@ -4,7 +4,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import { USER_CREATE, USER_LOGIN } from '../services/api';
 import Background from '../assets/signup-image.jpg';
 
-import style from './styles/Form.module.css';
+import './styles/Form.css';
 
 export default function Form({ type }) {
   const [username, setUsername] = React.useState('');
@@ -59,7 +59,7 @@ export default function Form({ type }) {
   }, []);
 
   return (
-    <main className={style.contentMain}>
+    <main className="contentMain">
       <div
         style={
           type === 'Registrar'
@@ -71,12 +71,12 @@ export default function Form({ type }) {
               }
             : null
         }
-        className={style.wrapper}
+        className="wrapper"
       >
         <h1>{type}</h1>
         <form onSubmit={handleSubmit} autoComplete="off">
           <div>
-            <label className={style.label} htmlFor="username">
+            <label className="label" htmlFor="username">
               Usuário:
             </label>
             <input
@@ -89,7 +89,7 @@ export default function Form({ type }) {
           </div>
 
           <div>
-            <label className={style.label} htmlFor="password">
+            <label className="label" htmlFor="password">
               Senha:
             </label>
             <input
