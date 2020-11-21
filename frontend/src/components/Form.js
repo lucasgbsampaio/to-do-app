@@ -59,7 +59,7 @@ export default function Form({ type }) {
   }, []);
 
   return (
-    <div className={style.container}>
+    <div className={style.contentMain}>
       <div
         style={
           type === 'Registrar'
