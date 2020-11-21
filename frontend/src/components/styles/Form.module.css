@@ -1,27 +1,51 @@
-h1 {
+.wrapper {
+  position: relative;
+  width: 90%;
+  max-width: 750px;
+  height: 90%;
+  max-height: 400px;
+  padding: 50px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0px 20px;
+  background: url('../../assets//signin-image.jpg') no-repeat 90% center;
+  background-color: #fff;
+
+  color: black;
+  border-radius: 7px;
+}
+
+.wrapper h1 {
   font-size: 56px;
   font-weight: 900;
 }
-div {
+
+.wrapper div {
   font-size: 18px;
   padding: 10px 0px;
   line-height: 30px;
   font-weight: 600;
 }
-h1,
-div,
-a {
+
+.wrapper h1,
+.wrapper div,
+.wrapper a {
   margin: 15px;
 }
-input,
-button,
-a {
+
+.wrapper input,
+.wrapper button,
+.wrapper a {
   color: black;
 }
-a {
+
+.wrapper a {
   text-decoration: underline;
 }
-input {
+
+.wrapper input {
   width: 90%;
   border: none;
   border-bottom: 1px solid #999;
@@ -29,11 +53,13 @@ input {
   padding: 10px;
   background-color: #fff;
 }
-input:focus,
-input:active {
+
+.wrapper input:focus,
+.wrapper input:active {
   outline: none;
 }
-input[type='submit'] {
+
+.wrapper input[type='submit'] {
   background-image: linear-gradient(
     to right,
     #4776e6 0%,
@@ -41,7 +67,8 @@ input[type='submit'] {
     #4776e6 100%
   );
 }
-input[type='submit'] {
+
+.wrapper input[type='submit'] {
   width: 50%;
   padding: 10px 25px;
   text-align: center;
@@ -52,23 +79,24 @@ input[type='submit'] {
   color: #f4f4f4;
   cursor: pointer;
 }
-input[type='submit']:hover {
+
+.wrapper input[type='submit']:hover {
   background-position: right center;
   text-decoration: none;
 }
 
 @media (max-width: 770px) {
-  form {
+  .wrapper form {
     width: 100%;
   }
-  input[type='submit'] {
+  .wrapper input[type='submit'] {
     width: 100%;
     max-width: 150px;
   }
 }
 
 @media (max-width: 420px) {
-  h1 {
+  .wrapper h1 {
     font-size: 36px;
   }
 }
@@ -78,3 +106,10 @@ input[type='submit']:hover {
     display: flex;
   }
 }
+
+@media (max-height: 520px) {
+  .wrapper {
+    margin-bottom: 15px;
+    margin-top: 50px;
+  }
+} ;

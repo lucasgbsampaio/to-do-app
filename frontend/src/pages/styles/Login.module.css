@@ -1,27 +1,8 @@
-.contentMainLogin {
+.contentMain {
   height: 100vh;
   width: 100vw;
 
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.wrapperLogin {
-  position: relative;
-  width: 90%;
-  max-width: 750px;
-  height: 90%;
-  max-height: 400px;
-  padding: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin: 0px 20px;
-  background: url('../../assets/signin-image.jpg') no-repeat 90% center;
-  background-color: #fff;
-
-  color: black;
-  border-radius: 7px;
 }
