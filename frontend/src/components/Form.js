@@ -59,19 +59,7 @@ export default function Form({ type }) {
   }, []);
 
   return (
-    <div
-      style={
-        type === 'Registrar'
-          ? {
-              backgroundColor: '#fff',
-              backgroundImage: `url(${Background})`,
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: '85% center',
-            }
-          : null
-      }
-      className={style.wrapper}
-    >
+    <div className={style.wrapper}>
       <h1>{type}</h1>
       <form onSubmit={handleSubmit} autoComplete="off">
         <div>
