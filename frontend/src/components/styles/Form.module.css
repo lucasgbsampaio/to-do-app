@@ -11,8 +11,8 @@
   justify-content: space-between;
   margin: 0px 20px;
 
-  background: url('../../assets//signin-image.jpg') no-repeat 90% center;
   background-color: #fff;
+  background: url('../../assets//signin-image.jpg') no-repeat 90% center;
   color: black;
   border-radius: 7px;
 }
@@ -87,8 +87,8 @@
 
 @media (max-width: 770px) {
   .wrapper {
-    background: none !important;
     background-color: #fff !important;
+    background: none !important;
   }
   .wrapper form {
     width: 100%;

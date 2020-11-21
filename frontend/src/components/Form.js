@@ -63,9 +63,9 @@ export default function Form({ type }) {
       style={
         type === 'Registrar'
           ? {
+              backgroundColor: '#fff',
               backgroundImage: `url(${Background})`,
               backgroundRepeat: 'no-repeat',
-              backgroundColor: '#fff',
               backgroundPosition: '85% center',
             }
           : null
