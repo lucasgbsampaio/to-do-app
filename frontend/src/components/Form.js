@@ -59,7 +59,7 @@ export default function Form({ type }) {
   }, []);
 
   return (
-    <main className="contentMain">
+    <div className="contentMain">
       <div
         style={
           type === 'Registrar'
@@ -130,6 +130,6 @@ export default function Form({ type }) {
           )}
         </form>
       </div>
-    </main>
+    </div>
   );
 }
