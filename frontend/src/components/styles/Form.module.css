@@ -1,51 +1,27 @@
-.wrapper {
-  position: relative;
-  width: 90%;
-  max-width: 750px;
-  height: 90%;
-  max-height: 400px;
-  padding: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin: 0px 20px;
-  background: url('../../assets//signin-image.jpg') no-repeat 90% center;
-  background-color: #fff;
-
-  color: black;
-  border-radius: 7px;
-}
-
-.wrapper h1 {
+h1 {
   font-size: 56px;
   font-weight: 900;
 }
-
-.wrapper div {
+div {
   font-size: 18px;
   padding: 10px 0px;
   line-height: 30px;
   font-weight: 600;
 }
-
-.wrapper h1,
-.wrapper div,
-.wrapper a {
+h1,
+div,
+a {
   margin: 15px;
 }
-
-.wrapper input,
-.wrapper button,
-.wrapper a {
+input,
+button,
+a {
   color: black;
 }
-
-.wrapper a {
+a {
   text-decoration: underline;
 }
-
-.wrapper input {
+input {
   width: 90%;
   border: none;
   border-bottom: 1px solid #999;
@@ -53,13 +29,11 @@
   padding: 10px;
   background-color: #fff;
 }
-
-.wrapper input:focus,
-.wrapper input:active {
+input:focus,
+input:active {
   outline: none;
 }
-
-.wrapper input[type='submit'] {
+input[type='submit'] {
   background-image: linear-gradient(
     to right,
     #4776e6 0%,
@@ -67,8 +41,7 @@
     #4776e6 100%
   );
 }
-
-.wrapper input[type='submit'] {
+input[type='submit'] {
   width: 50%;
   padding: 10px 25px;
   text-align: center;
@@ -79,24 +52,23 @@
   color: #f4f4f4;
   cursor: pointer;
 }
-
-.wrapper input[type='submit']:hover {
+input[type='submit']:hover {
   background-position: right center;
   text-decoration: none;
 }
 
 @media (max-width: 770px) {
-  .wrapper form {
+  form {
     width: 100%;
   }
-  .wrapper input[type='submit'] {
+  input[type='submit'] {
     width: 100%;
     max-width: 150px;
   }
 }
 
 @media (max-width: 420px) {
-  .wrapper h1 {
+  h1 {
     font-size: 36px;
   }
 }
@@ -106,10 +78,3 @@
     display: flex;
   }
 }
-
-@media (max-height: 520px) {
-  .wrapper {
-    margin-bottom: 15px;
-    margin-top: 50px;
-  }
-} ;

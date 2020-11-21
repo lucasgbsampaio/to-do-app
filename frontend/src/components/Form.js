@@ -59,64 +59,62 @@ export default function Form({ type }) {
 
   return (
     <>
-      <div className={style.wrapper}>
-        <h1>{type}</h1>
-        <form onSubmit={handleSubmit} autoComplete="off">
-          <div>
-            <label className={style.label} htmlFor="username">
-              Usuário:
-            </label>
-            <input
-              type="text"
-              name="username"
-              id="username"
-              value={username}
-              onChange={({ target }) => setUsername(target.value)}
-            />
-          </div>
+      <h1>{type}</h1>
+      <form onSubmit={handleSubmit} autoComplete="off">
+        <div>
+          <label className={style.label} htmlFor="username">
+            Usuário:
+          </label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            value={username}
+            onChange={({ target }) => setUsername(target.value)}
+          />
+        </div>
 
-          <div>
-            <label className={style.label} htmlFor="password">
-              Senha:
-            </label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              value={password}
-              onChange={({ target }) => setPassword(target.value)}
-            />
-          </div>
+        <div>
+          <label className={style.label} htmlFor="password">
+            Senha:
+          </label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            value={password}
+            onChange={({ target }) => setPassword(target.value)}
+          />
+        </div>
 
-          <div>
-            {!loading ? (
-              <input type="submit" value={type} />
-            ) : (
-              <input
-                style={{
-                  fontSize: '16px',
-                  opacity: '0.5',
-                  cursor: 'not-allowed',
-                }}
-                readOnly
-                type="submit"
-                value="Carregando..."
-              />
-            )}
-            {error && (
-              <span style={{ marginLeft: '15px', fontSize: '14px' }}>
-                {error}
-              </span>
-            )}
-          </div>
-
-          {type === 'Entrar' ? (
-            <NavLink to="/register">Não possui uma conta?</NavLink>
+        <div>
+          {!loading ? (
+            <input type="submit" value={type} />
           ) : (
-            <NavLink to="/login">Já possui uma conta?</NavLink>
+            <input
+              style={{
+                fontSize: '16px',
+                opacity: '0.5',
+                cursor: 'not-allowed',
+              }}
+              readOnly
+              type="submit"
+              value="Carregando..."
+            />
           )}
-        </form>
-      </div>
+          {error && (
+            <span style={{ marginLeft: '15px', fontSize: '14px' }}>
+              {error}
+            </span>
+          )}
+        </div>
+
+        {type === 'Entrar' ? (
+          <NavLink to="/register">Não possui uma conta?</NavLink>
+        ) : (
+          <NavLink to="/login">Já possui uma conta?</NavLink>
+        )}
+      </form>
     </>
   );
 }
