@@ -4,7 +4,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import { USER_CREATE, USER_LOGIN } from '../services/api';
 import Background from '../assets/signup-image.jpg';
 
-import style from './styles/Form.module.css';
+import style from './styles/Sla.module.css';
 
 export default function Form({ type }) {
   const [username, setUsername] = React.useState('');
