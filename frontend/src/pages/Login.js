@@ -6,7 +6,7 @@ import style from './styles/Login.module.css';
 
 export default function Login() {
   return (
-    <div className={style.contentMain}>
+    <div className={style.contentMainLogin}>
       <Form type="Entrar" />
     </div>
   );
