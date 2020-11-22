@@ -15,11 +15,10 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-if (process.env.NODE_ENV === 'production')
-  app.use(express.static(path.join(__dirname, 'frontend', 'build')));
+app.use(express.static(path.join(__dirname, '../frontend/build')));
 app.use('/api', routes);
-app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'frontend', 'build', 'index.html'));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
 });
 
 const { DB_USER, DB_PASSWORD, DB_NAME } = process.env;
