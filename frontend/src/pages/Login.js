@@ -37,7 +37,7 @@ export default function Login() {
   }
 
   return (
-    <div className={style.contentMainLogin}>
+    <div className={style.container}>
       <div className={style.wrapper}>
         <h1>Entrar</h1>
         <form onSubmit={handleSubmit} autoComplete="off">
