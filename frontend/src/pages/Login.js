@@ -36,13 +36,6 @@ export default function Login() {
     }
   }
 
-  React.useEffect(() => {
-    return () => {
-      setLoading(false);
-      setError(null);
-    };
-  }, []);
-
   return (
     <div className={style.contentMainLogin}>
       <div className={style.wrapper}>
