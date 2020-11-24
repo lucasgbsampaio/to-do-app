@@ -1,20 +1,11 @@
 .contentMainLogin {
-  height: 100vh;
-  width: 100vw;
-
-  background: linear-gradient(
-    to right,
-    #f37335,
-    #fdc830
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  height: 900px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .contentMainLogin .wrapper {
-  position: relative;
   width: 90%;
   max-width: 750px;
   height: 90%;
