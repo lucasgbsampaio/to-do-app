@@ -51,7 +51,7 @@ export default function Form({ type }) {
   }
 
   return (
-    <div className={style.wrapper}>
+    <div className={style.container}>
       <h1>{type}</h1>
       <form onSubmit={handleSubmit} autoComplete="off">
         <div>
