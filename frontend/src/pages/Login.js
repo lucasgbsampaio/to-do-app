@@ -36,59 +36,61 @@ export default function Login() {
   }
 
   return (
-    <div className={style.wrapper}>
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit} autoComplete="off">
-        <div>
-          <label className={style.label} htmlFor="username">
-            Usuário:
-          </label>
-          <input
-            type="text"
-            name="username"
-            id="username"
-            value={username}
-            onChange={({ target }) => setUsername(target.value)}
-          />
-        </div>
-
-        <div>
-          <label className={style.label} htmlFor="password">
-            Senha:
-          </label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            value={password}
-            onChange={({ target }) => setPassword(target.value)}
-          />
-        </div>
-
-        <div>
-          {!loading ? (
-            <input type="submit" value="Login" />
-          ) : (
+    <div className={style.contentMainLogin}>
+      <div className={style.wrapper}>
+        <h1>Login</h1>
+        <form onSubmit={handleSubmit} autoComplete="off">
+          <div>
+            <label className={style.label} htmlFor="username">
+              Usuário:
+            </label>
             <input
-              style={{
-                fontSize: '16px',
-                opacity: '0.5',
-                cursor: 'not-allowed',
-              }}
-              readOnly
-              type="submit"
-              value="Carregando..."
+              type="text"
+              name="username"
+              id="username"
+              value={username}
+              onChange={({ target }) => setUsername(target.value)}
             />
-          )}
-          {error && (
-            <span style={{ marginLeft: '15px', fontSize: '14px' }}>
-              {error}
-            </span>
-          )}
-        </div>
+          </div>
 
-        <NavLink to="/register">Não possui uma conta?</NavLink>
-      </form>
+          <div>
+            <label className={style.label} htmlFor="password">
+              Senha:
+            </label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              value={password}
+              onChange={({ target }) => setPassword(target.value)}
+            />
+          </div>
+
+          <div>
+            {!loading ? (
+              <input type="submit" value="Login" />
+            ) : (
+              <input
+                style={{
+                  fontSize: '16px',
+                  opacity: '0.5',
+                  cursor: 'not-allowed',
+                }}
+                readOnly
+                type="submit"
+                value="Carregando..."
+              />
+            )}
+            {error && (
+              <span style={{ marginLeft: '15px', fontSize: '14px' }}>
+                {error}
+              </span>
+            )}
+          </div>
+
+          <NavLink to="/register">Não possui uma conta?</NavLink>
+        </form>
+      </div>
     </div>
   );
 }
