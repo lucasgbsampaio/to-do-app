@@ -1,19 +1,20 @@
+body,
 .wrapper {
-  width: 90% !important;
-  max-width: 750px !important;
-  height: 90% !important;
-  max-height: 400px !important;
-  padding: 50px !important;
-  display: flex !important;
-  align-items: flex-start !important;
-  flex-direction: column !important;
-  justify-content: space-between !important;
-  margin: 0px 20px !important;
-  background: url('../../assets/signin-image.jpg') no-repeat 90% center !important;
-  background-color: #fff !important;
+  width: 90%;
+  max-width: 750px;
+  height: 90%;
+  max-height: 400px;
+  padding: 50px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0px 20px;
+  background: url('../../assets/signin-image.jpg') no-repeat 90% center;
+  background-color: #fff;
 
-  color: black !important;
-  border-radius: 7px !important;
+  color: black;
+  border-radius: 7px;
 }
 
 .wrapper h1 {
