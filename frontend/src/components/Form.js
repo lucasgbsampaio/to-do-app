@@ -59,8 +59,8 @@ export default function Form({ type }) {
   }, []);
 
   return (
-    <div></div>
-    /* style={
+    <div
+      style={
         type === 'Registrar'
           ? {
               background: 'none',
@@ -128,6 +128,7 @@ export default function Form({ type }) {
         ) : (
           <NavLink to="/login">Já possui uma conta?</NavLink>
         )}
-      </form> */
+      </form>
+    </div>
   );
 }
