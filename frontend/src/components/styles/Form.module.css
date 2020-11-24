@@ -18,6 +18,7 @@
   align-items: flex-start;
   justify-content: space-between;
   margin: 0px 20px;
+  background: url('../../assets/signin-image.jpg') no-repeat 90% center;
   background-color: #fff;
 
   color: black;
@@ -43,7 +44,8 @@
 }
 
 .wrapper input,
-.wrapper button {
+.wrapper button,
+.wrapper a {
   color: black;
 }
 

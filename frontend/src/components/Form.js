@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 
 import { USER_CREATE, USER_LOGIN } from '../services/api';
+import Background from '../assets/signup-image.jpg';
 
 import style from './styles/Form.module.css';
 
@@ -52,9 +53,22 @@ export default function Form({ type }) {
 
   return (
     <div className={style.container}>
-      <div className={style.wrapper}>
+      <div
+        style={
+          type === 'Registrar'
+            ? {
+                background: 'none',
+                backgroundImage: `url(${Background})`,
+                backgroundRepeat: 'no-repeat',
+                backgroundColor: '#fff',
+                backgroundPosition: '85% center',
+              }
+            : null
+        }
+        className={style.wrapper}
+      >
         <h1>{type}</h1>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} autoComplete="off">
           <div>
             <label className={style.label} htmlFor="username">
               Usuário:
