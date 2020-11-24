@@ -7,7 +7,7 @@
   justify-content: center;
 }
 
-.wrapper {
+.contentMainLogin .wrapper {
   position: relative;
   width: 90%;
   max-width: 750px;
@@ -26,35 +26,35 @@
   border-radius: 7px;
 }
 
-.wrapper h1 {
+.contentMainLogin h1 {
   font-size: 56px;
   font-weight: 900;
 }
 
-.wrapper div {
+.contentMainLogin div {
   font-size: 18px;
   padding: 10px 0px;
   line-height: 30px;
   font-weight: 600;
 }
 
-.wrapper h1,
-.wrapper div,
-.wrapper a {
+.contentMainLogin h1,
+.contentMainLogin div,
+.contentMainLogin a {
   margin: 15px;
 }
 
-.wrapper input,
-.wrapper button,
-.wrapper a {
+.contentMainLogin input,
+.contentMainLogin button,
+.contentMainLogin a {
   color: black;
 }
 
-.wrapper a {
+.contentMainLogin a {
   text-decoration: underline;
 }
 
-.wrapper input {
+.contentMainLogin input {
   width: 90%;
   border: none;
   border-bottom: 1px solid #999;
@@ -63,12 +63,12 @@
   background-color: #fff;
 }
 
-.wrapper input:focus,
-.wrapper input:active {
+.contentMainLogin input:focus,
+.contentMainLogin input:active {
   outline: none;
 }
 
-.wrapper input[type='submit'] {
+.contentMainLogin input[type='submit'] {
   background-image: linear-gradient(
     to right,
     #4776e6 0%,
@@ -77,7 +77,7 @@
   );
 }
 
-.wrapper input[type='submit'] {
+.contentMainLogin input[type='submit'] {
   width: 50%;
   padding: 10px 25px;
   text-align: center;
@@ -89,23 +89,23 @@
   cursor: pointer;
 }
 
-.wrapper input[type='submit']:hover {
+.contentMainLogin input[type='submit']:hover {
   background-position: right center;
   text-decoration: none;
 }
 
 @media (max-width: 770px) {
-  .wrapper form {
+  .contentMainLogin form {
     width: 100%;
   }
-  .wrapper input[type='submit'] {
+  .contentMainLogin input[type='submit'] {
     width: 100%;
     max-width: 150px;
   }
 }
 
 @media (max-width: 420px) {
-  .wrapper h1 {
+  .contentMainLogin h1 {
     font-size: 36px;
   }
 }
@@ -117,7 +117,7 @@
 }
 
 @media (max-height: 520px) {
-  .wrapper {
+  .contentMainLogin {
     margin-bottom: 15px;
     margin-top: 50px;
   }
