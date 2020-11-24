@@ -1,11 +1,9 @@
 .contentMainLogin {
-  height: 900px;
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.contentMainLogin .wrapper {
+.wrapper {
+  position: relative;
   width: 90%;
   max-width: 750px;
   height: 90%;
@@ -23,35 +21,35 @@
   border-radius: 7px;
 }
 
-.contentMainLogin h1 {
+.wrapper h1 {
   font-size: 56px;
   font-weight: 900;
 }
 
-.contentMainLogin div {
+.wrapper div {
   font-size: 18px;
   padding: 10px 0px;
   line-height: 30px;
   font-weight: 600;
 }
 
-.contentMainLogin h1,
-.contentMainLogin div,
-.contentMainLogin a {
+.wrapper h1,
+.wrapper div,
+.wrapper a {
   margin: 15px;
 }
 
-.contentMainLogin input,
-.contentMainLogin button,
-.contentMainLogin a {
+.wrapper input,
+.wrapper button,
+.wrapper a {
   color: black;
 }
 
-.contentMainLogin a {
+.wrapper a {
   text-decoration: underline;
 }
 
-.contentMainLogin input {
+.wrapper input {
   width: 90%;
   border: none;
   border-bottom: 1px solid #999;
@@ -60,12 +58,12 @@
   background-color: #fff;
 }
 
-.contentMainLogin input:focus,
-.contentMainLogin input:active {
+.wrapper input:focus,
+.wrapper input:active {
   outline: none;
 }
 
-.contentMainLogin input[type='submit'] {
+.wrapper input[type='submit'] {
   background-image: linear-gradient(
     to right,
     #4776e6 0%,
@@ -74,7 +72,7 @@
   );
 }
 
-.contentMainLogin input[type='submit'] {
+.wrapper input[type='submit'] {
   width: 50%;
   padding: 10px 25px;
   text-align: center;
@@ -86,23 +84,23 @@
   cursor: pointer;
 }
 
-.contentMainLogin input[type='submit']:hover {
+.wrapper input[type='submit']:hover {
   background-position: right center;
   text-decoration: none;
 }
 
 @media (max-width: 770px) {
-  .contentMainLogin form {
+  .wrapper form {
     width: 100%;
   }
-  .contentMainLogin input[type='submit'] {
+  .wrapper input[type='submit'] {
     width: 100%;
     max-width: 150px;
   }
 }
 
 @media (max-width: 420px) {
-  .contentMainLogin h1 {
+  .wrapper h1 {
     font-size: 36px;
   }
 }
@@ -114,7 +112,7 @@
 }
 
 @media (max-height: 520px) {
-  .contentMainLogin {
+  .wrapper {
     margin-bottom: 15px;
     margin-top: 50px;
   }
