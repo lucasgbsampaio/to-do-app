@@ -14,10 +14,10 @@ export default function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route exact path="/" element={<Homepage />} />
-          <Route exact path="/login" element={<Login />} />
-          <Route exact path="/register" element={<Register />} />
-          <Route exact path="/to-do" element={<ToDoList />} />
+          <Route path="/" element={<Homepage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/to-do" element={<ToDoList />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
