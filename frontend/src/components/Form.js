@@ -51,13 +51,6 @@ export default function Form({ type }) {
     }
   }
 
-  React.useEffect(() => {
-    return () => {
-      setLoading(false);
-      setError(null);
-    };
-  }, []);
-
   return (
     <div
       style={
@@ -74,7 +67,7 @@ export default function Form({ type }) {
       className={style.wrapper}
     >
       <h1>{type}</h1>
-      <form onSubmit={handleSubmit} autoComplete="off">
+      <form onSubmit={handleSubmit}>
         <div>
           <label className={style.label} htmlFor="username">
             Usuário:
