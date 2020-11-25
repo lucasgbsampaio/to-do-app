@@ -51,7 +51,23 @@ export default function Form({ type }) {
   }
 
   return (
-    <div className={style.wrapper}>
+    <div
+      className={style.wrapper}
+      style={{
+        width: '90%',
+        maxWidth: '750px',
+        height: '90%',
+        maxHeight: '400px',
+        padding: '50px',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'spaceBetween',
+        margin: '0px 20px',
+        backgroundColor: '#fff',
+        borderRadius: '7px',
+        color: 'black',
+      }}
+    >
       <h1>{type}</h1>
       <form onSubmit={handleSubmit} autoComplete="off">
         <div>
