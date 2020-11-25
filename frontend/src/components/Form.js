@@ -61,11 +61,13 @@ export default function Form({ type }) {
         padding: '50px',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'spaceBetween',
+        justifyContent: 'space-between',
         margin: '0px 20px',
         backgroundColor: '#fff',
         borderRadius: '7px',
         color: 'black',
+        background:
+          '#fff url("../assets/signin-image.jpg") no-repeat 90% center',
       }}
     >
       <h1>{type}</h1>
