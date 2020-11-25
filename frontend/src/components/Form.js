@@ -3,6 +3,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 
 import { USER_CREATE, USER_LOGIN } from '../services/api';
 import Background from '../assets/signin-image.jpg';
+import Background2 from '../assets/signup-image.jpg';
 
 import style from './styles/Form.module.css';
 
@@ -69,7 +70,8 @@ export default function Form({ type }) {
         borderRadius: '7px',
         color: 'black',
         backgroundColor: '#fff',
-        backgroundImage: `url(${Background})`,
+        backgroundImage:
+          type === 'Entrar' ? `url(${Background})` : `url(${Background2})`,
         backgroundRepeat: 'no-repeat',
         backgroundPosition: '90% center',
       }}
