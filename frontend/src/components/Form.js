@@ -53,6 +53,7 @@ export default function Form({ type }) {
 
   return (
     <div
+      // contornando bug
       className={style.wrapper}
       style={{
         width: '90%',
@@ -70,8 +71,7 @@ export default function Form({ type }) {
         backgroundColor: '#fff',
         backgroundImage: `url(${Background})`,
         backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        backgroundSize: '90%',
+        backgroundPosition: '90% center',
       }}
     >
       <h1>{type}</h1>

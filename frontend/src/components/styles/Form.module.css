@@ -78,6 +78,10 @@
 }
 
 @media (max-width: 770px) {
+  .wrapper {
+    background: none !important;
+    background-color: #fff !important;
+  }
   .wrapper form {
     width: 100%;
   }
