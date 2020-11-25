@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 
 import { USER_CREATE, USER_LOGIN } from '../services/api';
+import Background from '../assets/signin-image.jpg';
 
 import style from './styles/Form.module.css';
 
@@ -61,13 +62,16 @@ export default function Form({ type }) {
         padding: '50px',
         display: 'flex',
         flexDirection: 'column',
+        alignItems: 'flex-start',
         justifyContent: 'space-between',
         margin: '0px 20px',
-        backgroundColor: '#fff',
         borderRadius: '7px',
         color: 'black',
-        background:
-          '#fff url("../assets/signin-image.jpg") no-repeat 90% center',
+        backgroundColor: '#fff',
+        backgroundImage: `url(${Background})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        backgroundSize: '90%',
       }}
     >
       <h1>{type}</h1>
@@ -121,9 +125,13 @@ export default function Form({ type }) {
         </div>
 
         {type === 'Entrar' ? (
-          <NavLink to="/register">Não possui uma conta?</NavLink>
+          <NavLink style={{ color: 'black' }} to="/register">
+            Não possui uma conta?
+          </NavLink>
         ) : (
-          <NavLink to="/login">Já possui uma conta?</NavLink>
+          <NavLink style={{ color: 'black' }} to="/login">
+            Já possui uma conta?
+          </NavLink>
         )}
       </form>
     </div>
